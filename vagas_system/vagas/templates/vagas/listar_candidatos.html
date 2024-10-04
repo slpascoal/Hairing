@@ -1,0 +1,10 @@
+<h2>Candidatos para a vaga: {{ vaga.nome }}</h2>
+<ul>
+  {% for candidatura in candidaturas %}
+    <li>
+      {{ candidatura.candidato.email }} - Pretensão salarial: {{ candidatura.pretensao_salarial }}<br>
+      Escolaridade: {{ candidatura.escolaridade }}<br>
+      Pontuação: {{ candidatura.pontuacao }} pontos
+    </li>
+  {% endfor %}
+</ul>

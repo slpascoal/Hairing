@@ -1,0 +1,13 @@
+<h2>Minhas Candidaturas</h2>
+<ul>
+    {% for candidatura in candidaturas %}
+    <li>
+        <strong>Vaga: {{ candidatura.vaga.nome }}</strong><br>
+        Faixa Salarial da Vaga: {{ candidatura.vaga.get_faixa_salarial_display }}<br>
+        Pretensão Salarial: {{ candidatura.pretensao_salarial }}<br>
+        Escolaridade: {{ candidatura.get_escolaridade_display }}<br>
+        Experiência: {{ candidatura.experiencia }}<br>
+        Pontuação: {{ candidatura.pontuacao }} pontos<br>
+    </li>
+    {% endfor %}
+</ul>

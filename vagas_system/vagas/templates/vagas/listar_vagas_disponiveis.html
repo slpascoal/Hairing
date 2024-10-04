@@ -1,0 +1,12 @@
+<h2>Vagas Disponíveis</h2>
+<ul>
+    {% for vaga in vagas %}
+    <li>
+        <strong>{{ vaga.nome }}</strong><br>
+        Faixa Salarial: {{ vaga.get_faixa_salarial_display }}<br>
+        Requisitos: {{ vaga.requisitos }}<br>
+        Escolaridade mínima: {{ vaga.get_escolaridade_minima_display }}<br>
+        <a href="{% url 'candidatar_vaga' vaga.id %}">Candidatar-se</a>
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+<h2>Minhas Vagas</h2>
+<a href="{% url 'criar_vaga' %}">Criar Nova Vaga</a>
+<ul>
+  {% for vaga in vagas %}
+    <li>
+      {{ vaga.nome }} - {{ vaga.faixa_salarial }}
+      <a href="{% url 'editar_vaga' vaga.id %}">Editar</a> | 
+      <a href="{% url 'deletar_vaga' vaga.id %}">Deletar</a> | 
+      <a href="{% url 'listar_candidatos' vaga.id %}">Ver Candidatos</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,6 @@
+<h2>Candidatar-se à vaga: {{ vaga.nome }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar Candidatura</button>
+</form>
