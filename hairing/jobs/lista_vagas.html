@@ -1,8 +1,0 @@
-<h1>Vagas Disponíveis</h1>
-<ul>
-    {% for vaga in vagas %}
-    <li>
-        <a href="{% url 'detalhes_vaga' vaga.id %}">{{ vaga.nome }}</a> - {{ vaga.faixa_salarial }}
-    </li>
-    {% endfor %}
-</ul>
